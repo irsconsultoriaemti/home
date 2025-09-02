@@ -4,241 +4,230 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IRS Consultoria em TI – Soluções Corporativas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f4f7f9;
-      margin: 0;
-      padding: 0;
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Roboto', sans-serif; }
+    body { background-color: #f4f7f9; color: #333; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    header {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      background: #00468C;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 50px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-    h1 {
-      color: #00468C;
+    header nav a { margin-left: 20px; font-weight: 500; color: #fff; transition: 0.3s; }
+    header nav a:hover { color: #ff6b00; }
+
+    .hero {
+      margin-top: 80px;
       text-align: center;
-      margin-bottom: 25px;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #00468C, #0072CE);
+      color: #fff;
+      border-radius: 0 0 50% 50%;
     }
-    h2 {
-      color: #00468C;
-      margin-top: 35px;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #00468C;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
+    .hero h1 { font-size: 3em; margin-bottom: 15px; }
+    .hero p { font-size: 1.3em; }
+
+    .container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+
+    section { margin-bottom: 60px; }
+    h2 { color: #00468C; margin-bottom: 20px; border-bottom: 3px solid #00468C; display: inline-block; padding-bottom: 5px; }
+
+    ul { list-style: none; padding-left: 0; }
+    ul li { margin-bottom: 10px; position: relative; padding-left: 25px; }
     ul li::before {
       content: "✔️";
-      margin-right: 8px;
+      position: absolute;
+      left: 0;
       color: #00468C;
     }
-    .plans {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 10px;
-    }
+
+    .skills { display: flex; flex-wrap: wrap; gap: 30px; margin-top: 20px; }
+    .skill-category { flex: 1; min-width: 220px; }
+
+    .plans { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
     .plan {
       flex: 1;
-      min-width: 240px;
+      min-width: 250px;
       background: #e6f0ff;
       padding: 25px;
       border-radius: 12px;
       border: 1px solid #00468C;
-      transition: transform 0.2s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .plan:hover {
-      transform: translateY(-5px);
-    }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-    .skill-category {
-      flex: 1;
-      min-width: 220px;
-    }
+    .plan:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+    .plan h3 { color: #00468C; margin-bottom: 15px; }
+
     .contact {
-      margin-top: 40px;
       text-align: center;
       background: #00468C;
       color: #fff;
-      padding: 25px;
+      padding: 40px 20px;
       border-radius: 15px;
     }
-    .contact a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
+    .contact a { color: #ffffff; font-weight: bold; }
     .cta-button {
       display: inline-block;
       margin-top: 15px;
-      padding: 12px 25px;
-      background-color: #ff6b00;
+      padding: 15px 30px;
+      background-color: #0072CE;
       color: #fff;
       border-radius: 8px;
-      text-decoration: none;
       font-weight: bold;
-      transition: background 0.2s;
+      transition: 0.3s;
     }
-    .cta-button:hover {
-      background-color: #e65c00;
-    }
-    .header-subtitle {
+    .cta-button:hover { background-color: #e65c00; }
+
+    footer {
       text-align: center;
-      color: #00468C;
-      font-size: 18px;
-      margin-bottom: 40px;
+      padding: 20px;
+      background: #002f5a;
+      color: #fff;
     }
+    footer a { color: #ff6b00; }
   </style>
 </head>
 <body>
-  <div class="container">
+  <header>
+    <div><strong>IRS Consultoria em TI</strong></div>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#competencias">Competências</a>
+      <a href="#planos">Planos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
     <h1>IRS Consultoria em TI</h1>
-    <p class="header-subtitle">Excelência em Desenvolvimento de Software, Gestão de Dados e Infraestrutura Corporativa</p>
+    <p>Excelência em Desenvolvimento de Software, Gestão de Dados e Infraestrutura Corporativa</p>
+  </section>
 
-    <h2>🚀 Sobre Nós</h2>
-    <p>
-      A <strong>IRS Consultoria em TI</strong> é uma empresa especializada em soluções corporativas completas, incluindo desenvolvimento Full Stack, administração avançada de bancos de dados, automação de infraestrutura e computação em nuvem.
-      Atuamos em projetos críticos para órgãos públicos e empresas privadas, entregando soluções seguras, escaláveis e de alta performance.
-    </p>
-    <ul>
-      <li>Desenvolvimento de aplicações Desktop e Web com React, Angular, C# e JavaScript</li>
-      <li>Administração de bancos Oracle, SQL Server, MySQL e PostgreSQL</li>
-      <li>Procedures, Functions, Triggers e Packages complexos em PL/SQL</li>
-      <li>Gerenciamento de ambientes de alta disponibilidade e disaster recovery</li>
-      <li>Automação e monitoramento de servidores Linux e Windows via Shell Scripts e Jenkins</li>
-      <li>Cloud Computing: Oracle Cloud Infrastructure, Microsoft Azure e AWS</li>
-      <li>Integração de dados e APIs corporativas</li>
-      <li>Documentação e orientação técnica para equipes de desenvolvimento</li>
-      <li>Segurança e compliance em ambientes críticos e regulados</li>
-    </ul>
+  <div class="container">
+    <section id="sobre">
+      <h2>🚀 Sobre Nós</h2>
+      <p>A <strong>IRS Consultoria em TI</strong> oferece soluções corporativas completas: desenvolvimento Full Stack, administração avançada de bancos de dados, automação de infraestrutura e computação em nuvem. Atuamos em projetos críticos para órgãos públicos e empresas privadas, entregando soluções seguras, escaláveis e de alta performance.</p>
+      <ul>
+        <li>Desenvolvimento de aplicações Desktop e Web com React, Angular, C# e JavaScript</li>
+        <li>Administração de bancos Oracle, SQL Server, MySQL e PostgreSQL</li>
+        <li>Procedures, Functions, Triggers e Packages complexos em PL/SQL</li>
+        <li>Gerenciamento de ambientes de alta disponibilidade e disaster recovery</li>
+        <li>Automação e monitoramento de servidores Linux e Windows via Shell Scripts e Jenkins</li>
+        <li>Cloud Computing: Oracle Cloud Infrastructure, Microsoft Azure e AWS</li>
+        <li>Integração de dados e APIs corporativas</li>
+        <li>Documentação e orientação técnica para equipes de desenvolvimento</li>
+        <li>Segurança e compliance em ambientes críticos e regulados</li>
+      </ul>
+    </section>
 
-    <h2>💼 Diferenciais</h2>
-    <ul>
-      <li>Mais de 10 anos de experiência em projetos de grande porte e criticidade</li>
-      <li>Certificações Oracle: Autonomous Database Cloud, Cloud Infrastructure Architect</li>
-      <li>Gestão e supervisão de equipes de TI e desenvolvimento terceirizadas</li>
-      <li>Foco em performance, escalabilidade, segurança e redução de custos operacionais</li>
-      <li>Monitoramento contínuo de sistemas e bancos de dados críticos</li>
-    </ul>
-
-    <h2>🛠️ Competências Técnicas</h2>
-    <div class="skills">
-      <div class="skill-category">
-        <strong>Desenvolvimento e Arquitetura:</strong>
-        <ul>
-          <li>React, Angular, JavaScript, C#</li>
-          <li>Desenvolvimento Full Stack e integração de sistemas complexos</li>
-          <li>Documentação técnica, revisão de código e boas práticas</li>
-        </ul>
+    <section id="competencias">
+      <h2>🛠️ Competências Técnicas</h2>
+      <div class="skills">
+        <div class="skill-category">
+          <strong>Desenvolvimento e Arquitetura:</strong>
+          <ul>
+            <li>React, Angular, JavaScript, C#</li>
+            <li>Full Stack e integração de sistemas complexos</li>
+            <li>Documentação técnica, revisão de código e boas práticas</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <strong>Bancos de Dados e PL/SQL:</strong>
+          <ul>
+            <li>Oracle, SQL Server, MySQL, PostgreSQL</li>
+            <li>Procedures, Functions, Triggers, Packages complexos</li>
+            <li>Backup, RMAN, tuning, segurança e alta disponibilidade</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <strong>Infraestrutura e Cloud:</strong>
+          <ul>
+            <li>Oracle Cloud Infrastructure, Microsoft Azure, AWS</li>
+            <li>Monitoramento de servidores Linux e Windows Server</li>
+            <li>Automação via Jenkins, Shell Scripts e integração de APIs</li>
+          </ul>
+        </div>
       </div>
-      <div class="skill-category">
-        <strong>Bancos de Dados e PL/SQL:</strong>
-        <ul>
-          <li>Oracle, SQL Server, MySQL, PostgreSQL</li>
-          <li>Procedures, Functions, Triggers, Packages complexos</li>
-          <li>Backup, RMAN, tuning, segurança e alta disponibilidade</li>
-        </ul>
+    </section>
+
+    <section id="planos">
+      <h2>📦 Planos de Serviços</h2>
+      <div class="plans">
+        <div class="plan">
+          <h3>Plano Essencial – R$1.800/mês</h3>
+          <ul>
+            <li>20h/mês de suporte e desenvolvimento</li>
+            <li>Suporte e melhorias estratégicas para sistemas corporativos</li>
+            <li>Administração de bancos de dados críticos</li>
+            <li>Monitoramento básico de sistemas e servidores</li>
+          </ul>
+        </div>
+
+        <div class="plan">
+          <h3>Plano Intermediário – R$3.600/mês</h3>
+          <ul>
+            <li>40h/mês de suporte e desenvolvimento</li>
+            <li>Inclui todos os serviços do Plano Essencial</li>
+            <li>Dashboards personalizados</li>
+            <li>Monitoramento avançado com alertas proativos</li>
+            <li>Relatórios periódicos e documentação técnica</li>
+          </ul>
+        </div>
+
+        <div class="plan">
+          <h3>Plano Avançado – R$7.200/mês</h3>
+          <ul>
+            <li>80h/mês de suporte e desenvolvimento</li>
+            <li>Inclui todos os serviços do Plano Intermediário</li>
+            <li>Gestão completa de sistemas e bancos de dados críticos</li>
+            <li>Consultoria estratégica em TI e Cloud</li>
+            <li>Atualizações e patches de segurança regulares</li>
+          </ul>
+        </div>
+
+        <div class="plan">
+          <h3>Plano Premium 24h/7</h3>
+          <ul>
+            <li>Suporte contínuo 24/7 com prioridade máxima</li>
+            <li>Inclui todos os serviços do Plano Avançado</li>
+            <li>Monitoramento proativo e manutenção crítica em tempo real</li>
+            <li>Gestão completa de incidentes e performance</li>
+            <li>Garantia de uptime e SLA dedicado</li>
+          </ul>
+        </div>
+
+        <div class="plan">
+          <h3>Projeto Sob Demanda</h3>
+          <ul>
+            <li>Serviços totalmente customizados conforme a necessidade do cliente</li>
+            <li>Desenvolvimento de aplicações e soluções corporativas sob demanda</li>
+            <li>Integrações complexas e dashboards personalizados</li>
+            <li>Automação, cloud e consultoria estratégica avançada</li>
+          </ul>
+        </div>
       </div>
-      <div class="skill-category">
-        <strong>Infraestrutura e Cloud:</strong>
-        <ul>
-          <li>Oracle Cloud Infrastructure, Microsoft Azure, AWS</li>
-          <li>Monitoramento de servidores Linux (CentOS, Ubuntu, Oracle Linux) e Windows Server</li>
-          <li>Automação via Jenkins, Shell Scripts e integração de APIs</li>
-        </ul>
-      </div>
-    </div>
-<h2>📦 Planos de Serviços</h2>
-<div class="plans">
-  <div class="plan">
-    <h3>Plano Essencial – R$1.800/mês</h3>
-    <ul>
-      <li>20h/mês de suporte e desenvolvimento</li>
-      <li>Suporte e melhorias estratégicas para sistemas corporativos</li>
-      <li>Administração de bancos de dados críticos</li>
-      <li>Monitoramento básico de sistemas e servidores</li>
-    </ul>
-  </div>
+    </section>
 
-  <div class="plan">
-    <h3>Plano Intermediário – R$3.600/mês</h3>
-    <ul>
-      <li>40h/mês de suporte e desenvolvimento</li>
-      <li>Inclui todos os serviços do Plano Essencial</li>
-      <li>Dashboards personalizados</li>
-      <li>Monitoramento avançado com alertas proativos</li>
-      <li>Relatórios periódicos e documentação técnica</li>
-    </ul>
-  </div>
-
-  <div class="plan">
-    <h3>Plano Avançado – R$7.200/mês</h3>
-    <ul>
-      <li>80h/mês de suporte e desenvolvimento</li>
-      <li>Inclui todos os serviços do Plano Intermediário</li>
-      <li>Gestão completa de sistemas e bancos de dados críticos</li>
-      <li>Consultoria estratégica em TI e Cloud</li>
-      <li>Atualizações e patches de segurança regulares</li>
-      <li>Consultoria em performance de banco de dados e sistemas</li>
-    </ul>
-  </div>
-
-  <div class="plan">
-    <h3>Plano Premium 24h/7</h3>
-    <ul>
-      <li>Suporte contínuo 24/7 com prioridade máxima</li>
-      <li>Inclui todos os serviços do Plano Avançado</li>
-      <li>Monitoramento proativo e manutenção crítica em tempo real</li>
-      <li>Gestão completa de incidentes e performance</li>
-      <li>Garantia de uptime e SLA dedicado</li>
-      <li>Suporte a integrações complexas e migração de dados</li>
-    </ul>
-  </div>
-
-  <div class="plan">
-    <h3>Projeto Sob Demanda</h3>
-    <ul>
-      <li>Serviços totalmente customizados conforme a necessidade do cliente</li>
-      <li>Desenvolvimento de aplicações e soluções corporativas sob demanda</li>
-      <li>Integrações complexas e dashboards personalizados</li>
-      <li>Automação, cloud e consultoria estratégica avançada</li>
-      <li>Entrega de soluções completas, desde análise de requisitos até implementação e suporte</li>
-    </ul>
-  </div>
-</div>
-
-
-    <h2>✅ Benefícios para sua Empresa</h2>
-    <ul>
-      <li>Redução de custos operacionais e aumento da eficiência</li>
-      <li>Segurança, estabilidade e compliance nos sistemas corporativos</li>
-      <li>Resolução rápida de incidentes críticos</li>
-      <li>Foco total nas operações e core business da empresa</li>
-    </ul>
-
-    <div class="contact">
+    <section class="contact" id="contato">
       <h2>📞 Contato</h2>
       <p>IRS Consultoria em TI</p>
       <p>📧 <a href="mailto:irsconsultoriaemti@gmail.com">irsconsultoriaemti@gmail.com</a></p>
       <p>📱 (+55) 11 97084-6429</p>
       <p>📍 São Paulo – Brasil</p>
       <a class="cta-button" href="mailto:irsconsultoriaemti@gmail.com">Solicitar Orçamento / Marcar Reunião</a>
-    </div>
+    </section>
   </div>
+
+  <footer>
+    &copy; 2025 IRS Consultoria em TI. Todos os direitos reservados.
+  </footer>
 </body>
 </html>
